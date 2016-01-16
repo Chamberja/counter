@@ -1,10 +1,36 @@
 {
-	"name": "Temple",
-	"version": "0.0.1",
-	"description": "A Repository for Temple, Website Theme",
-	"author": "Jason Ames",
-	"license": "ISC",
-	"dependencies": {
-		"express": "^4.13.3"
-	}
+  "name": "temple",
+  "version": "1.0.0",
+  "description": "Temple Theme",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chamberja/Temple.git"
+  },
+  "author": "jason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chamberja/Temple/issues"
+  },
+  "homepage": "https://github.com/Chamberja/Temple#readme",
+  "dependencies": {
+    "del": "^2.2.0",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.1",
+    "jshint": "^2.9.1"
+  }
 }
