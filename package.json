@@ -1,0 +1,10 @@
+{
+	"name": "Temple",
+	"version": "0.0.1",
+	"description": "A Repository for Temple, Website Theme";
+	"author": "Jason Ames",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.13.3"
+	}
+}
