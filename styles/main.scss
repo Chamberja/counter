@@ -1,10 +1,13 @@
+$color: yellow;
+
 body {
-	background: yellow;
+	background: $color;
 }
 
 h1 {
-  color: red;
+  color: darken($color, 30%);
   font-size: 22px;
   padding: 20px;
   border-radius: 12px;
+  display: flex;
 }
