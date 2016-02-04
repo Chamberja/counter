@@ -8,12 +8,10 @@ var gulp = require('gulp'),
   rename = require("gulp-rename");
 
 gulp.task('serve', ['styles'], function() {
-
   browserSync.init({
    server: './dist'      
   });
-
-  gulp.watch('styles/*.scss', ['styles']);
+  gulp.watch('styles/**/*.scss', ['styles']);
   gulp.watch('dist/*.html').on('change', browserSync.reload);
 });
 
@@ -24,7 +22,7 @@ gulp.task('styles', function() {
     .pipe(autoprefixer('last 2 versions'))
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/styles'))
     .pipe(browserSync.stream())
     .pipe(notify('Build Finished'));
 });
