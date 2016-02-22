@@ -6,17 +6,20 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber');
   cssnano = require('gulp-cssnano');
   rename = require("gulp-rename");
+  clean = require("gulp-clean")
 
 gulp.task('serve', ['styles'], function() {
   browserSync.init({
-   server: './dist'      
+    server: 'dist',
+    index: '/views/index.html'
   });
-  gulp.watch('styles/**/*.scss', ['styles']);
-  gulp.watch('dist/*.html').on('change', browserSync.reload);
+  gulp.watch('src/styles/**/*.scss', ['styles']);
+  gulp.watch('src/views/**/*.html', ['views']);
+  gulp.watch('src/**/*').on('change', browserSync.reload);
 });
 
-gulp.task('styles', function() {
-  gulp.src('styles/*.scss')
+gulp.task('styles', ['views'], function() {
+  gulp.src('src/styles/*.scss')
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
@@ -24,7 +27,17 @@ gulp.task('styles', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/styles'))
     .pipe(browserSync.stream())
-    .pipe(notify('Build Finished'));
+    // .pipe(notify('Build Finished'));
+});
+
+gulp.task('views', function() {
+  gulp.src('src/views/*.html')
+    .pipe(gulp.dest('dist/views'))
+});
+
+gulp.task('clean', function() {
+  return gulp.src('dist', {read: false })
+    .pipe(clean());
 });
 
 gulp.task('default', ['serve']);
