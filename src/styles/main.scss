@@ -70,6 +70,7 @@ b {
 }
 
 header h1 {
+  letter-spacing: 3rem;
   font-size: 7rem;
   position: absolute;
   left: 0;
@@ -77,6 +78,5 @@ header h1 {
   top: 25rem;
   border: none;
   text-align: center;
-      -webkit-font-smoothing: antialiased;
-    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  text-transform: uppercase;
 }
