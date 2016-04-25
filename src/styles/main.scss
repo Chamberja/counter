@@ -1,13 +1,82 @@
-@import 'helpers/variables';
-@import 'components/navigation';
+@font-face {
+  font-family: 'Futura Heavy';
+  src: 
+    url('../assets/futura-heavy-webfont.ttf'), 
+    url('../assets/futura-heavy-webfont.woff'),
+    url('../assets/futura-heavy-webfont.woff2'), 
+    url('../assets/futura-heavy-webfont.eot'), 
+    url('../assets/futura-heavy-webfont.svg')
+}
+
+@mixin header($font-size) {
+  line-height: $font-size/1.618rem;
+}
+
+$black: #1a1a1a;
+$white: #eaeaea;
+
+html {
+  font-size: 62.5%;
+}
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  @include header(2.5rem);
   margin: 0;
   height: 100%;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Sintony', sans-serif;
+  font-size: 1.6rem;
+  background: $black;
+  color: $white;
+  font-weight: 100;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Futura Heavy';
+}
+
+h1 {
+  @include header(3.2rem);
+  font-size: 3.2rem;
+}
+
+h2 {
+  @include header(2.8rem);
+  font-size: 2.8rem;
+}
+
+h3 {
+  @include header(2.4rem);
+  font-size: 2.4rem;
+}
+
+h4 {
+  @include header(2rem);
+  font-size: 2rem;
+}
+
+b {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-size: 7rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25rem;
+  border: none;
+  text-align: center;
+      -webkit-font-smoothing: antialiased;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }

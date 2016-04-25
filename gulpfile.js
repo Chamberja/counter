@@ -30,6 +30,16 @@ gulp.task('styles', ['views'], function() {
     // .pipe(notify('Build Finished'));
 });
 
+gulp.task('fonts', function() {
+  gulp.src('src/assets/fonts/*.*')
+    .pipe(gulp.dest('dist/assets'))
+});
+
+gulp.task('videos', function() {
+  gulp.src('src/assets/videos/*.*')
+    .pipe(gulp.dest('dist/assets'))
+});
+
 gulp.task('views', function() {
   gulp.src('src/views/*.html')
     .pipe(gulp.dest('dist/views'))
