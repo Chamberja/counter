@@ -18,7 +18,7 @@ gulp.task('serve', ['styles'], function() {
   gulp.watch('src/**/*').on('change', browserSync.reload);
 });
 
-gulp.task('styles', ['views'], function() {
+gulp.task('styles', ['views', 'assets'], function() {
   gulp.src('src/styles/*.scss')
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass())
@@ -27,16 +27,11 @@ gulp.task('styles', ['views'], function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/styles'))
     .pipe(browserSync.stream())
-    // .pipe(notify('Build Finished'));
+    .pipe(notify('Build Finished'));
 });
 
-gulp.task('fonts', function() {
-  gulp.src('src/assets/fonts/*.*')
-    .pipe(gulp.dest('dist/assets'))
-});
-
-gulp.task('videos', function() {
-  gulp.src('src/assets/videos/*.*')
+gulp.task('assets', function() {
+  gulp.src('src/assets/**/*.*')
     .pipe(gulp.dest('dist/assets'))
 });
 

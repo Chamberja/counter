@@ -69,14 +69,11 @@ b {
   text-transform: uppercase;
 }
 
-header h1 {
-  letter-spacing: 3rem;
-  font-size: 7rem;
+header img {
+  width: 80%;
   position: absolute;
+  top: 25vh;
   left: 0;
   right: 0;
-  top: 25rem;
-  border: none;
-  text-align: center;
-  text-transform: uppercase;
+  margin: auto;
 }
