@@ -1,29 +1,9 @@
-@font-face {
-  font-family: 'Futura Heavy';
-  src: 
-    url('../assets/futura-heavy-webfont.ttf'), 
-    url('../assets/futura-heavy-webfont.woff'),
-    url('../assets/futura-heavy-webfont.woff2'), 
-    url('../assets/futura-heavy-webfont.eot'), 
-    url('../assets/futura-heavy-webfont.svg')
-}
-
-@mixin header($font-size) {
-  line-height: $font-size/1.618rem;
-}
-
-$black: #020202;
-$white: #eaeaea;
-
-html {
-  font-size: 62.5%;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+@import 'src/styles/typography';
+@import 'src/styles/resets';
+@import 'src/styles/hero';
+@import 'src/styles/navigation';
 
 body {
   @include header(2.5rem);
@@ -37,81 +17,19 @@ body {
   font-weight: 100;
 }
 
-main {
-  background: url('/assets/images/translucentbg.jpg') no-repeat fixed $black;
-  background-size: cover;
-}
+header {
+  height: 5rem;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1;
 
-h1, h2, h3, h4 {
-  font-family: 'Futura Heavy';
-  margin: 1.5rem 0;
-}
-
-h1 {
-  @include header(3.2rem);
-  font-size: 3.2rem;
-}
-
-h2 {
-  @include header(2.8rem);
-  font-size: 2.8rem;
-}
-
-h3 {
-  @include header(2.4rem);
-  font-size: 2.4rem;
-}
-
-h4 {
-  @include header(2rem);
-  font-size: 2rem;
-}
-
-b {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.splash {
-  position: relative;
-  line-height: 0;
-
-  .logo, .chevron {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-
-  .logo {
-    width: 80%;
-    top: 25%;
-  }
-
-  .chevron {
-    width: 5%;
-    top: 75%;
-  }
-}
-
-main section {
-  &[role="content"] {
-    width: 80%;
-    margin: auto;
-    padding: 5rem;
-    background: rgba(2, 2, 2, 0.5);
-    min-height: 1000px;
-  }
-
-  &[role=breaker] {
-    width: 100%;
-    height:100%;
-    display: block;
-    line-height: 0;
-
-    img {
-      width: 100%;
-    }
+  button {
+    height: 100%;
+    width: 50px;
+    background: transparent;
+    color: $white;
+    border: none;
   }
 }
 

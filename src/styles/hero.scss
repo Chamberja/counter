@@ -1,0 +1,21 @@
+.hero {
+  position: relative;
+  line-height: 0;
+
+  .logo, .chevron {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .logo {
+    width: 80%;
+    top: 25%;
+  }
+
+  .chevron {
+    width: 5%;
+    top: 75%;
+  }
+}

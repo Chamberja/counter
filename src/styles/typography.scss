@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Futura Heavy';
+  src: 
+    url('../assets/futura-heavy-webfont.ttf'), 
+    url('../assets/futura-heavy-webfont.woff'),
+    url('../assets/futura-heavy-webfont.woff2'), 
+    url('../assets/futura-heavy-webfont.eot'), 
+    url('../assets/futura-heavy-webfont.svg')
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Futura Heavy';
+  margin: 1.5rem 0;
+}
+
+h1 {
+  @include header(3.2rem);
+  font-size: 3.2rem;
+}
+
+h2 {
+  @include header(2.8rem);
+  font-size: 2.8rem;
+}
+
+h3 {
+  @include header(2.4rem);
+  font-size: 2.4rem;
+}
+
+h4 {
+  @include header(2rem);
+  font-size: 2rem;
+}

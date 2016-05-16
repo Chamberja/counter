@@ -6,7 +6,7 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber');
   cssnano = require('gulp-cssnano');
   rename = require("gulp-rename");
-  clean = require("gulp-clean")
+  clean = require("gulp-clean");
 
 gulp.task('serve', ['styles'], function() {
   browserSync.init({
@@ -19,7 +19,7 @@ gulp.task('serve', ['styles'], function() {
 });
 
 gulp.task('styles', ['views', 'assets'], function() {
-  gulp.src('src/styles/*.scss')
+  gulp.src('src/styles/main.scss')
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
