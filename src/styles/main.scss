@@ -4,6 +4,8 @@
 @import 'src/styles/resets';
 @import 'src/styles/hero';
 @import 'src/styles/navigation';
+@import 'src/styles/colours';
+@import 'src/styles/content';
 
 body {
   @include header(2.5rem);
@@ -32,4 +34,3 @@ header {
     border: none;
   }
 }
-

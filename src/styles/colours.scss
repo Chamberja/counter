@@ -1,0 +1,64 @@
+$primary-theme: #9C27B0 !default;
+$secondary-theme: #56b8d3 !default;
+$tertiary-theme: #f6bd60 !default;
+$grey-theme: #888888 !default;
+
+
+
+$red: #b10e1e !default;
+$green: #00823b !default;
+$yellow: #ffbf47 !default;
+$blue: #2b8cc4 !default;
+
+$adjusted: mix($primary-theme, $red, 25%);
+$adjusted2: mix($primary-theme, $blue, 25%);
+$adjusted3: mix($primary-theme, $yellow, 25%);
+$adjusted4: mix($primary-theme, $green, 25%);
+
+
+
+$focus-shadow-color: #4d90fe !default;
+
+
+
+$primary-color-100: scale-color($primary-theme, $lightness: 75%) !default;
+$primary-color-200: scale-color($primary-theme, $lightness: 55%) !default;
+$primary-color-300: scale-color($primary-theme, $lightness: 35%) !default;
+$primary-color-400: scale-color($primary-theme, $lightness: 15%) !default;
+$primary-color-500: $primary-theme !default;
+$primary-color-600: scale-color($primary-theme, $lightness: -15%) !default;
+$primary-color-700: scale-color($primary-theme, $lightness: -35%) !default;
+$primary-color-800: scale-color($primary-theme, $lightness: -45%) !default;
+$primary-color-900: scale-color($primary-theme, $lightness: -75%) !default;
+
+$secondary-color-100: scale-color($secondary-theme, $lightness: 75%) !default;
+$secondary-color-200: scale-color($secondary-theme, $lightness: 55%) !default;
+$secondary-color-300: scale-color($secondary-theme, $lightness: 35%) !default;
+$secondary-color-400: scale-color($secondary-theme, $lightness: 15%) !default;
+$secondary-color-500: $secondary-theme !default;
+$secondary-color-600: scale-color($secondary-theme, $lightness: -15%) !default;
+$secondary-color-700: scale-color($secondary-theme, $lightness: -35%) !default;
+$secondary-color-800: scale-color($secondary-theme, $lightness: -45%) !default;
+$secondary-color-900: scale-color($secondary-theme, $lightness: -75%) !default;
+
+$tertiary-color-100: scale-color($tertiary-theme, $lightness: 75%) !default;
+$tertiary-color-200: scale-color($tertiary-theme, $lightness: 55%) !default;
+$tertiary-color-300: scale-color($tertiary-theme, $lightness: 35%) !default;
+$tertiary-color-400: scale-color($tertiary-theme, $lightness: 15%) !default;
+$tertiary-color-500: $tertiary-theme !default;
+$tertiary-color-600: scale-color($tertiary-theme, $lightness: -15%) !default;
+$tertiary-color-700: scale-color($tertiary-theme, $lightness: -35%) !default;
+$tertiary-color-800: scale-color($tertiary-theme, $lightness: -45%) !default;
+$tertiary-color-900: scale-color($tertiary-theme, $lightness: -75%) !default;
+
+$white-color: scale-color($grey-theme, $lightness: 90%) !default;
+$grey-color-100: scale-color($grey-theme, $lightness: 75%) !default;
+$grey-color-200: scale-color($grey-theme, $lightness: 55%) !default;
+$grey-color-300: scale-color($grey-theme, $lightness: 35%) !default;
+$grey-color-400: scale-color($grey-theme, $lightness: 15%) !default;
+$grey-color-500: $grey-theme !default;
+$grey-color-600: scale-color($grey-theme, $lightness: -15%) !default;
+$grey-color-700: scale-color($grey-theme, $lightness: -35%) !default;
+$grey-color-800: scale-color($grey-theme, $lightness: -45%) !default;
+$grey-color-900: scale-color($grey-theme, $lightness: -75%) !default;
+$black-color: scale-color($grey-theme, $lightness: -90%) !default;
