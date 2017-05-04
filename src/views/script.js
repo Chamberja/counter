@@ -6,21 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const down = container.querySelector('.down');
   let current = 0;
 
-  const countUp = () => {
-    current = current + 1;
-    return current;
-  };
-
-  const countDown = () => {
-    current = current - 1;
-    return current;
+  const render = (current) => {
+    counter.innerHTML = current ;
   };
 
   up.addEventListener('click', () => {
-    counter.innerHTML = countUp();
+    current = current + 1;
+    render(current);
   })
 
   down.addEventListener('click', () => {
-    counter.innerHTML = countDown();
+    current = current - 1;
+    render(current);
   })
 });
