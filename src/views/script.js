@@ -10,13 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     counter.innerHTML = current ;
   };
 
-  up.addEventListener('click', () => {
-    current = current + 1;
-    render(current);
-  })
+  document.addEventListener('click', (e)=> {
+    switch(e.srcElement.classList.value) {
+      case 'up':
+        render(current = current + 1);
+        break;
 
-  down.addEventListener('click', () => {
-    current = current - 1;
-    render(current);
+      case 'down':
+        render(current = current - 1);
+        break;
+    }
   })
 });
