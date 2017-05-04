@@ -4,21 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const counter = container.querySelector('.counter');
   const up = container.querySelector('.up');
   const down = container.querySelector('.down');
-
-  const getCount = () => {
-    return parseInt(counter.innerHTML);
-  };
+  let current = 0;
 
   const countUp = () => {
-    let current = getCount();
-    let addition = current + 1;
-    return addition;
+    current = current + 1;
+    return current;
   };
 
   const countDown = () => {
-    let current = getCount();
-    let subtraction = current - 1;
-    return subtraction;
+    current = current - 1;
+    return current;
   };
 
   up.addEventListener('click', () => {
